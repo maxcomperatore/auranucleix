@@ -250,7 +250,7 @@ flowchart LR
 To contrast the lifestyle burden of weekly self-injections against oral solid-dose pharmacotherapy, the clinical user experience is illustrated below:
 
 <div align="center">
-  <img src="auraglutide_product_lifestyle.jpg" width="85%" alt="Patient Experience & Oral Tablet Concept" />
+  <img src="auraglutide_lifestyle_v2.jpg" width="92%" alt="Auraglutide Morning Oral Routine (High-Resolution Lifestyle)" />
 </div>
 
 * **Patient-Reported Preference**: Over $80\%$ of patients in metabolic disease registries favor a morning oral tablet over subcutaneous injections.
@@ -268,7 +268,7 @@ auranucleix/
 ├── AURA-712_3D.sdf                     # Energy-minimized 3D atomic coordinates (UFF)
 ├── AURA-712_2D.png                     # 2D publication structure depiction
 ├── auraglutide_studio_packshot.jpg     # Clinical studio packshot (FDA regulatory layout)
-├── auraglutide_product_lifestyle.jpg   # Real-world lifestyle & patient experience concept
+├── auraglutide_lifestyle_v2.jpg        # Ultra-realistic morning patient experience concept
 ├── glp1r_3d_structure_render.png       # AlphaFold/Mol* 3D molecular structure render
 ├── docking_energy_breakdown.png        # Active-state 6XOX docking energy breakdown
 ├── cmc_synthesis_reaction.png          # RDKit simulated chemical synthesis reaction
