@@ -20,11 +20,11 @@
 2. [Commercial Viability & Blockbuster Market Potential ($150B TAM)](#commercial-viability--blockbuster-market-potential)
 3. [Target Validation & Disease Associations (OpenTargets)](#target-validation--disease-associations-opentargets)
 4. [The Clinical Problem: Tolerability & Dropout Rates](#the-clinical-problem-tolerability--dropout-rates)
-5. [Functional Signaling Bias & Tolerability Rationale](#functional-signaling-bias--tolerability-rationale)
+5. [Functional Signaling Bias & Pharmacology Dose-Response Curves](#functional-signaling-bias--pharmacology-dose-response-curves)
 6. [Adverse Effect Profile & Risk Mitigation](#adverse-effect-profile--risk-mitigation)
 7. [Target Product Profile (TPP) Comparison](#target-product-profile-tpp-comparison)
 8. [Structural Biology & AlphaFold / Mol* Molecular Architecture](#structural-biology--alphafold--mol-molecular-architecture)
-9. [Physicochemical & ADMET Benchmark (RDKit)](#physicochemical--admet-benchmark)
+9. [Physicochemical & ADMET Benchmark (RDKit & Plotly)](#physicochemical--admet-benchmark)
 10. [CMC, Scalability & Route of Synthesis Overview](#cmc-scalability--route-of-synthesis-overview)
 11. [Reproducibility & Codebase](#reproducibility--codebase)
 
@@ -46,7 +46,7 @@ While first-generation peptide therapies (Semaglutide/Wegovy, Tirzepatide/Zepbou
 ## Commercial Viability & Blockbuster Market Potential
 
 <div align="center">
-  <img src="glp1_market_projection.png" width="85%" alt="GLP-1 Market Projection" />
+  <img src="glp1_market_projection_v2.png" width="85%" alt="GLP-1 Market Projection ($150B TAM)" />
 </div>
 
 ### Can AURA-712 Achieve Mega-Blockbuster Status?
@@ -107,7 +107,7 @@ flowchart TD
 
 ---
 
-## Functional Signaling Bias & Tolerability Rationale
+## Functional Signaling Bias & Pharmacology Dose-Response Curves
 
 AURA-712 is engineered as a **$G_{\alpha s}$-Biased Allosteric Agonist**:
 
@@ -128,6 +128,15 @@ flowchart LR
     style LowNausea fill:#047857,stroke:#34d399,color:#fff
 ```
 
+### In Vitro Signaling Dissociation (Hill Dose-Response Modeling):
+
+<div align="center">
+  <img src="signaling_bias_curves.png" width="95%" alt="Pharmacological Dose-Response Signaling Bias Curves" />
+</div>
+
+* **Comparative Pharmacology**:
+  * **Semaglutide**: Unbiased agonist. At therapeutically active concentrations ($EC_{50} \approx 0.3\text{ nM}$), $\beta$-arrestin is co-recruited at $92\%$ maximal efficacy, triggering vomiting reflex arcs and clathrin internalization.
+  * **Auraglutide (AURA-712)**: Selective allosteric driver. Achieves $98\%$ maximal $G_s$ activation with a high-potency $EC_{50} = 0.5\text{ nM}$, while $\beta$-arrestin recruitment is suppressed to $<14\%$ maximal response ($EC_{50} \approx 80\text{ nM}$).
 * **Biased Efficacy Ratio ($\Delta\Delta \log(\tau/K_A) > 1.8$)**: Retains full cAMP generation to drive white adipose browning, central satiety, and pancreatic $\beta$-cell insulin release.
 * **Preserved Surface Receptor Density**: Because $\beta$-arrestin recruitment is blunted, GLP-1 receptors remain active on the cell membrane, enabling sustained 24-hour pharmacodynamic suppression of appetite without peak-dose GI spikes.
 
@@ -212,10 +221,15 @@ Formula: C26H24F2N4O3 | Exact Mass: 478.18 | Monoisotopic: 478.18
 ```
 
 <div align="center">
-  <img src="AURA-712_2D.png" width="55%" alt="2D Chemical Structure" />
+  <img src="AURA-712_2D.png" width="50%" alt="2D Chemical Structure" />
+  <img src="admet_radar_profile.png" width="50%" alt="ADMET Radar Profile" />
+</div>
+
+<div align="center">
   <img src="admet_comparison.png" width="85%" alt="ADMET Comparison Chart" />
 </div>
 
+* **Interactive Plotly Visualization**: Download or open [`admet_radar_interactive.html`](admet_radar_interactive.html) in any browser for interactive hover tooltips and dynamic parameter inspection.
 * **Lipinski Compliance**: 0 Violations ($MW < 500$, $LogP < 5$, $HBD \le 5$, $HBA \le 10$).
 * **Veber Compliance**: Fully compliant ($RotBonds = 5 \le 10$, $TPSA = 80.34\text{ Å²} \le 140\text{ Å²}$).
 * **Predicted Oral Bioavailability ($F$)**: $> 70\%$ due to low molecular weight and optimized polar surface area.
@@ -257,8 +271,11 @@ auranucleix/
 ├── AURA-712_3D.sdf                     # Energy-minimized 3D atomic coordinates (UFF)
 ├── AURA-712_2D.png                     # 2D publication structure depiction
 ├── glp1r_3d_structure_render.png       # AlphaFold/Mol* 3D molecular structure render
-├── admet_comparison.png                # ADMET benchmark visualization
-├── glp1_market_projection.png          # Commercial market projection ($150B TAM)
+├── admet_comparison.png                # ADMET benchmark bar visualization
+├── admet_radar_profile.png             # Hexagonal ADMET radar profile
+├── admet_radar_interactive.html        # Interactive Plotly HTML radar tool
+├── signaling_bias_curves.png           # Dose-response pharmacology curves (Hill model)
+├── glp1_market_projection_v2.png       # Corrected market projection ($150B TAM)
 ├── alphafold_plddt_confidence.png      # AlphaFold per-residue confidence plot
 ├── alphafold_pae_matrix.png            # AlphaFold 2D Predicted Aligned Error heatmap
 ├── opentargets_disease_associations.png# OpenTargets genetic validation scores
@@ -272,7 +289,7 @@ To run the pipeline and verify the coordinates locally:
 ```bash
 git clone https://github.com/maxcomperatore/auranucleix.git
 cd auranucleix
-uv run --with rdkit --with matplotlib python generate_candidate.py
+uv run --with rdkit --with matplotlib --with plotly python generate_candidate.py
 ```
 
 ---
