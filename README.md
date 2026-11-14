@@ -13,9 +13,9 @@
 
 <br/>
 
-<img src="auraglutide_product_lifestyle.jpg" width="92%" alt="Auraglutide Oral Tablet Product & Patient Concept" />
+<img src="auraglutide_studio_packshot.jpg" width="92%" alt="Auraglutide Clinical Studio Packshot (30 mg Film-Coated Tablets)" />
 
-*Concept Product Profile: True once-daily solid oral tablet eliminating weekly subcutaneous injections and cold-chain storage.*
+*Figure 1: Commercial Target Product Profile (TPP) packaging concept. Solid oral dosage form formulated as 30 mg film-coated tablets for once-daily administration.*
 
 </div>
 
@@ -32,7 +32,8 @@
 8. [Medicinal Chemistry Triage: QED, SA_Score, and Structural Alerts](#medicinal-chemistry-triage-qed-sa_score-and-structural-alerts)
 9. [Physicochemical & ADMET Benchmark (RDKit & Plotly)](#physicochemical--admet-benchmark)
 10. [CMC, Scalability & Scalable Amide Coupling Synthesis](#cmc-scalability--scalable-amide-coupling-synthesis)
-11. [Reproducibility & Codebase](#reproducibility--codebase)
+11. [Patient Convenience & Lifestyle Profile](#patient-convenience--lifestyle-profile)
+12. [Reproducibility & Codebase](#reproducibility--codebase)
 
 ---
 
@@ -244,6 +245,19 @@ flowchart LR
 
 ---
 
+## Patient Convenience & Lifestyle Profile
+
+To contrast the lifestyle burden of weekly self-injections against oral solid-dose pharmacotherapy, the clinical user experience is illustrated below:
+
+<div align="center">
+  <img src="auraglutide_product_lifestyle.jpg" width="85%" alt="Patient Experience & Oral Tablet Concept" />
+</div>
+
+* **Patient-Reported Preference**: Over $80\%$ of patients in metabolic disease registries favor a morning oral tablet over subcutaneous injections.
+* **Adherence & Persistence**: Eliminating injection-site reactions (erythema, pain, bruising) and refrigerator storage constraints directly addresses the $\sim 50\%$ 1-year discontinuation rate seen with legacy peptide therapies.
+
+---
+
 ## Reproducibility & Codebase
 
 ```bash
@@ -253,7 +267,8 @@ auranucleix/
 ├── candidate_profile.json              # Machine-readable properties, QED, SA_Score & schema
 ├── AURA-712_3D.sdf                     # Energy-minimized 3D atomic coordinates (UFF)
 ├── AURA-712_2D.png                     # 2D publication structure depiction
-├── auraglutide_product_lifestyle.jpg   # High-resolution product & lifestyle concept render
+├── auraglutide_studio_packshot.jpg     # Clinical studio packshot (FDA regulatory layout)
+├── auraglutide_product_lifestyle.jpg   # Real-world lifestyle & patient experience concept
 ├── glp1r_3d_structure_render.png       # AlphaFold/Mol* 3D molecular structure render
 ├── docking_energy_breakdown.png        # Active-state 6XOX docking energy breakdown
 ├── cmc_synthesis_reaction.png          # RDKit simulated chemical synthesis reaction
