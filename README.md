@@ -13,7 +13,7 @@
 
 <br/>
 
-<img src="Auraglipron_godtier_packshot.jpg" width="94%" alt="Auraglipron 10/10 Commercial Packaging Suite" />
+<img src="auraglipron_packshot.jpg" width="94%" alt="Auraglipron 10/10 Commercial Packaging Suite" />
 
 *Figure 1: Commercial Target Product Profile (TPP) packaging suite. Features iridescent anti-counterfeit security hologram, EU-compliant Braille embossing, GS1 DataMatrix serialization, ergonomic easy-open cap with elastomer grip ribs, and calendarized compliance blister card (Mon–Sun).*
 
@@ -250,7 +250,7 @@ flowchart LR
 To contrast the lifestyle burden of weekly self-injections against oral solid-dose pharmacotherapy, the clinical user experience is illustrated below:
 
 <div align="center">
-  <img src="Auraglipron_godtier_lifestyle.jpg" width="92%" alt="Auraglipron Morning Oral Routine (God-Tier Luxury Editorial)" />
+  <img src="auraglipron_lifestyle.jpg" width="92%" alt="Auraglipron Morning Oral Routine (God-Tier Luxury Editorial)" />
 </div>
 
 * **Patient-Reported Preference**: Over $80\%$ of patients in metabolic disease registries favor a morning oral tablet over subcutaneous injections.
@@ -268,8 +268,8 @@ auranucleix/
 ├── candidate_profile.json              # Machine-readable properties, QED, SA_Score & schema
 ├── AURA-712_3D.sdf                     # Energy-minimized 3D atomic coordinates (UFF)
 ├── AURA-712_2D.png                     # 2D publication structure depiction
-├── Auraglipron_godtier_packshot.jpg    # 10/10 Award-winning clinical industrial design packshot
-├── Auraglipron_godtier_lifestyle.jpg   # 10/10 Leica/Summilux luxury lifestyle concept
+├── auraglipron_packshot.jpg    # 10/10 Award-winning clinical industrial design packshot
+├── auraglipron_lifestyle.jpg   # 10/10 Leica/Summilux luxury lifestyle concept
 ├── glp1r_3d_structure_render.png       # AlphaFold/Mol* 3D molecular structure render
 ├── docking_energy_breakdown.png        # Active-state 6XOX docking energy breakdown
 ├── cmc_synthesis_reaction.png          # RDKit simulated chemical synthesis reaction
