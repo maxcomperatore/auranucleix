@@ -16,12 +16,12 @@
 
 ## Table of Contents
 1. [Executive Summary & Investment Thesis](#executive-summary--investment-thesis)
-2. [Commercial Viability & Market Opportunity ($150B TAM)](#commercial-viability--market-opportunity)
+2. [Commercial Viability & Blockbuster Market Potential ($150B TAM)](#commercial-viability--blockbuster-market-potential)
 3. [The Clinical Problem: Tolerability & Dropout Rates](#the-clinical-problem-tolerability--dropout-rates)
 4. [Functional Signaling Bias & Tolerability Rationale](#functional-signaling-bias--tolerability-rationale)
 5. [Adverse Effect Profile & Risk Mitigation](#adverse-effect-profile--risk-mitigation)
 6. [Target Product Profile (TPP) Comparison](#target-product-profile-tpp-comparison)
-7. [Structural Biology & AlphaFold Deep-Learning Metrics](#structural-biology--alphafold-deep-learning-metrics)
+7. [Structural Biology & AlphaFold / Mol* Molecular Architecture](#structural-biology--alphafold--mol-molecular-architecture)
 8. [Physicochemical & ADMET Benchmark (RDKit)](#physicochemical--admet-benchmark)
 9. [CMC, Scalability & Route of Synthesis Overview](#cmc-scalability--route-of-synthesis-overview)
 10. [Reproducibility & Codebase](#reproducibility--codebase)
@@ -41,17 +41,20 @@ While first-generation peptide therapies (Semaglutide/Wegovy, Tirzepatide/Zepbou
 
 ---
 
-## Commercial Viability & Market Opportunity
+## Commercial Viability & Blockbuster Market Potential
 
 <div align="center">
   <img src="glp1_market_projection.png" width="85%" alt="GLP-1 Market Projection" />
 </div>
 
-* **Total Addressable Market (TAM)**: Projected to exceed **$150 Billion annually by 2034** across Obesity, Type 2 Diabetes, Non-Alcoholic Steatohepatitis (MASH/NASH), Cardiovascular Risk Reduction, and Obstructive Sleep Apnea.
-* **The Oral Shift**: Analysts predict oral small-molecule GLP-1s will capture over **40% of the total incretin market volume** as patients transition away from needles for chronic, lifelong maintenance therapy.
-* **COGS / Profitability Advantage**: 
-  * Synthetic peptide manufacturing costs: **~$15 – $45 per gram** + sterile pre-filled pen hardware.
-  * AURA-712 chemical synthesis: **<$1.20 per gram** via standard multi-kilogram batch organic chemistry, granting unprecedented gross margins for worldwide payer reimbursement.
+### Can AURA-712 Achieve Mega-Blockbuster Status?
+In pharmaceutical valuation, a **blockbuster** is defined as generating $\ge \$1\text{ Billion/year}$. Current peptide leaders (Ozempic/Wegovy and Mounjaro/Zepbound) generate over **\$25 Billion annually**, constrained primarily by manufacturing supply ceilings and high patient dropout rates:
+
+* **Massive Addressable Volume**: The global incretin market is expanding from \$38B in 2024 to an estimated **\$150 Billion by 2034**. 
+* **The Oral Replacement Wave**: Over **80% of patients prefer a once-daily tablet over weekly injections**. An oral small molecule with tolerable GI kinetics can realistically capture **5% to 10% of global incretin market share**, representing a **\$7.5B to \$15B annual peak sales opportunity** (Mega-Blockbuster territory).
+* **COGS Margin Expansion**: 
+  * Peptide manufacturing costs: **\$15 – \$45 per gram** + specialized sterile auto-injector pens.
+  * AURA-712 small-molecule synthesis: **<\$1.20 per gram** via standard multi-kilogram batch organic chemistry, enabling worldwide mass-market adoption and favorable payer reimbursement.
 
 ---
 
@@ -138,19 +141,23 @@ flowchart LR
 
 ---
 
-## Structural Biology & AlphaFold Deep-Learning Metrics
+## Structural Biology & AlphaFold / Mol* Molecular Architecture
 
-The molecular target is the human **GLP-1R** (UniProt: `P43220`, PDB: [6XOX](https://www.rcsb.org/structure/6XOX)). 
+The biological target is the human **GLP-1R** (UniProt: `P43220`, PDB: [6XOX](https://www.rcsb.org/structure/6XOX)). 
 
-To assess receptor plasticity and conformational rigidity across the transmembrane binding cleft, the complete AlphaFold deep-learning structural dataset was evaluated:
+The complete AlphaFold deep-learning structural coordinate model was evaluated and rendered:
+
+<div align="center">
+  <img src="glp1r_3d_structure_render.png" width="85%" alt="AlphaFold 3D Molecular Model" />
+</div>
 
 <div align="center">
   <img src="alphafold_plddt_confidence.png" width="85%" alt="AlphaFold pLDDT Score" />
   <img src="alphafold_pae_matrix.png" width="55%" alt="AlphaFold PAE Heatmap" />
 </div>
 
-* **Per-Residue Confidence (pLDDT)**: The entire 7-transmembrane helical bundle (Residues 135–410) registers very high structural confidence ($pLDDT > 90$), confirming that the binding cleft where AURA-712 anchors does not suffer from conformational disorder.
-* **Predicted Aligned Error (PAE)**: The rigid inter-domain alignment between TM1, TM2, TM3, and TM7 exhibits an expected position error $< 3\text{ Å}$, validating that ligand-receptor contacts computed in this domain have high spatial fidelity.
+* **Per-Residue Confidence (pLDDT)**: The entire 7-transmembrane helical bundle (Residues 135–410) registers very high structural confidence ($pLDDT > 90$, depicted in dark blue), confirming that the binding cleft where AURA-712 anchors is rigid and structurally ordered.
+* **Predicted Aligned Error (PAE)**: The inter-domain alignment between TM1, TM2, TM3, and TM7 exhibits an expected position error $< 3\text{ Å}$, validating that ligand-receptor contacts computed in this domain have high spatial fidelity.
 
 ```mermaid
 graph TD
@@ -231,6 +238,7 @@ auranucleix/
 ├── candidate_profile.json         # Machine-readable properties & chemical schema
 ├── AURA-712_3D.sdf                # Energy-minimized 3D atomic coordinates (UFF)
 ├── AURA-712_2D.png                # 2D publication structure depiction
+├── glp1r_3d_structure_render.png  # AlphaFold/Mol* 3D molecular structure render
 ├── admet_comparison.png           # ADMET benchmark visualization
 ├── glp1_market_projection.png     # Commercial market projection ($150B TAM)
 ├── alphafold_plddt_confidence.png # AlphaFold per-residue confidence plot
