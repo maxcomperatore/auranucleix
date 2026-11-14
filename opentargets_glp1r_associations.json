@@ -1,0 +1,241 @@
+{
+  "data": {
+    "target": {
+      "id": "ENSG00000112164",
+      "approvedSymbol": "GLP1R",
+      "approvedName": "glucagon like peptide 1 receptor",
+      "biotype": "protein_coding",
+      "geneticConstraint": [
+        {
+          "constraintType": "syn",
+          "score": -0.7109500169754028
+        },
+        {
+          "constraintType": "mis",
+          "score": 1.6246999502182007
+        },
+        {
+          "constraintType": "lof",
+          "score": 0.003135599894449115
+        }
+      ],
+      "tractability": [
+        {
+          "label": "Approved Drug",
+          "modality": "SM",
+          "value": false
+        },
+        {
+          "label": "Advanced Clinical",
+          "modality": "SM",
+          "value": true
+        },
+        {
+          "label": "Phase 1 Clinical",
+          "modality": "SM",
+          "value": false
+        },
+        {
+          "label": "Structure with Ligand",
+          "modality": "SM",
+          "value": true
+        },
+        {
+          "label": "High-Quality Ligand",
+          "modality": "SM",
+          "value": true
+        },
+        {
+          "label": "High-Quality Pocket",
+          "modality": "SM",
+          "value": false
+        },
+        {
+          "label": "Med-Quality Pocket",
+          "modality": "SM",
+          "value": false
+        },
+        {
+          "label": "Druggable Family",
+          "modality": "SM",
+          "value": true
+        },
+        {
+          "label": "Approved Drug",
+          "modality": "AB",
+          "value": false
+        },
+        {
+          "label": "Advanced Clinical",
+          "modality": "AB",
+          "value": false
+        },
+        {
+          "label": "Phase 1 Clinical",
+          "modality": "AB",
+          "value": false
+        },
+        {
+          "label": "UniProt loc high conf",
+          "modality": "AB",
+          "value": true
+        },
+        {
+          "label": "GO CC high conf",
+          "modality": "AB",
+          "value": true
+        },
+        {
+          "label": "UniProt loc med conf",
+          "modality": "AB",
+          "value": false
+        },
+        {
+          "label": "UniProt SigP or TMHMM",
+          "modality": "AB",
+          "value": true
+        },
+        {
+          "label": "GO CC med conf",
+          "modality": "AB",
+          "value": false
+        },
+        {
+          "label": "Human Protein Atlas loc",
+          "modality": "AB",
+          "value": false
+        },
+        {
+          "label": "Approved Drug",
+          "modality": "PR",
+          "value": false
+        },
+        {
+          "label": "Advanced Clinical",
+          "modality": "PR",
+          "value": false
+        },
+        {
+          "label": "Phase 1 Clinical",
+          "modality": "PR",
+          "value": false
+        },
+        {
+          "label": "Literature",
+          "modality": "PR",
+          "value": false
+        },
+        {
+          "label": "UniProt Ubiquitination",
+          "modality": "PR",
+          "value": false
+        },
+        {
+          "label": "Database Ubiquitination",
+          "modality": "PR",
+          "value": false
+        },
+        {
+          "label": "Half-life Data",
+          "modality": "PR",
+          "value": false
+        },
+        {
+          "label": "Small Molecule Binder",
+          "modality": "PR",
+          "value": true
+        },
+        {
+          "label": "Approved Drug",
+          "modality": "OC",
+          "value": true
+        },
+        {
+          "label": "Advanced Clinical",
+          "modality": "OC",
+          "value": false
+        },
+        {
+          "label": "Phase 1 Clinical",
+          "modality": "OC",
+          "value": false
+        }
+      ],
+      "associatedDiseases": {
+        "count": 1157,
+        "rows": [
+          {
+            "disease": {
+              "id": "MONDO_0005148",
+              "name": "type 2 diabetes mellitus"
+            },
+            "score": 0.7686888125519763
+          },
+          {
+            "disease": {
+              "id": "MONDO_0011122",
+              "name": "obesity disorder"
+            },
+            "score": 0.7168845468021983
+          },
+          {
+            "disease": {
+              "id": "MONDO_0005015",
+              "name": "diabetes mellitus"
+            },
+            "score": 0.7133951843275409
+          },
+          {
+            "disease": {
+              "id": "HP_0025502",
+              "name": "Overweight"
+            },
+            "score": 0.592069299401445
+          },
+          {
+            "disease": {
+              "id": "MONDO_0005044",
+              "name": "hypertensive disorder"
+            },
+            "score": 0.5489473897120744
+          },
+          {
+            "disease": {
+              "id": "EFO_1001248",
+              "name": "non-alcoholic fatty liver"
+            },
+            "score": 0.53477747068578
+          },
+          {
+            "disease": {
+              "id": "MONDO_0005147",
+              "name": "type 1 diabetes mellitus"
+            },
+            "score": 0.5207900087968578
+          },
+          {
+            "disease": {
+              "id": "MONDO_0005139",
+              "name": "morbid obesity"
+            },
+            "score": 0.48892057090611124
+          },
+          {
+            "disease": {
+              "id": "MONDO_0021187",
+              "name": "hyperlipidemia"
+            },
+            "score": 0.4693202876532138
+          },
+          {
+            "disease": {
+              "id": "MONDO_0005155",
+              "name": "cirrhosis of liver"
+            },
+            "score": 0.46359082499120186
+          }
+        ]
+      }
+    }
+  }
+}
