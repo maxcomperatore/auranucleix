@@ -13,7 +13,7 @@ import os
 
 candidate = {
     "compound_id": "AURA-712",
-    "commercial_name": "Auraglutide (AURA-712)",
+    "commercial_name": "Auraglipron (AURA-712)",
     "target_protein": "Human Glucagon-Like Peptide-1 Receptor (GLP-1R)",
     "target_uniprot": "P43220",
     "target_pdb_reference": "6XOX (Active State Small-Molecule Bound)",

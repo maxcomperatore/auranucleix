@@ -1,6 +1,6 @@
 <div align="center">
 
-# Auraglutide (AURA-712)
+# Auraglipron (AURA-712)
 ### Next-Generation Allosteric Biased Oral GLP-1 Receptor Agonist
 #### Preclinical Investigation & Target Product Profile (TPP) Data Room
 
@@ -13,7 +13,7 @@
 
 <br/>
 
-<img src="auraglutide_godtier_packshot.jpg" width="94%" alt="Auraglutide 10/10 Commercial Packaging Suite" />
+<img src="Auraglipron_godtier_packshot.jpg" width="94%" alt="Auraglipron 10/10 Commercial Packaging Suite" />
 
 *Figure 1: Commercial Target Product Profile (TPP) packaging suite. Features iridescent anti-counterfeit security hologram, EU-compliant Braille embossing, GS1 DataMatrix serialization, ergonomic easy-open cap with elastomer grip ribs, and calendarized compliance blister card (Mon–Sun).*
 
@@ -39,7 +39,7 @@
 
 ## Executive Summary & Investment Thesis
 
-**Auraglutide (AURA-712)** is a de novo, small-molecule, allosteric non-peptide agonist of the human Glucagon-Like Peptide-1 Receptor (**GLP-1R**). 
+**Auraglipron (AURA-712)** is a de novo, small-molecule, allosteric non-peptide agonist of the human Glucagon-Like Peptide-1 Receptor (**GLP-1R**). 
 
 While first-generation peptide therapies (Semaglutide/Wegovy, Tirzepatide/Zepbound) have validated the therapeutic efficacy of incretins, their commercial expansion into broad mass-market populations faces three steep roadblocks:
 1. **Parenteral Burden**: Injectable delivery limits patient compliance, adoption in early-stage pre-diabetes/obesity, and long-term persistence.
@@ -137,7 +137,7 @@ flowchart TD
 
 ## Comparative Target Product Profile (TPP) Matrix
 
-| Feature | Semaglutide (Wegovy/Ozempic) | Oral Semaglutide (Rybelsus) | Orforglipron (Eli Lilly / Foundayo) | **Auraglutide (AURA-712)** |
+| Feature | Semaglutide (Wegovy/Ozempic) | Oral Semaglutide (Rybelsus) | Orforglipron (Eli Lilly / Foundayo) | **Auraglipron (AURA-712)** |
 | :--- | :--- | :--- | :--- | :--- |
 | **Modality** | Acylated 31-mer Peptide | Peptide + SNAC absorption enhancer | Non-Peptide Small Molecule | **Allosteric Non-Peptide Small Molecule** |
 | **Administration** | Subcutaneous (weekly) | Oral tablet (daily) | Oral solid dose (daily) | **Oral solid tablet (daily)** |
@@ -226,7 +226,7 @@ flowchart LR
     A["2-Fluoro-4,6-dimethoxybenzoic acid\n(Intermediate 1)"] --> Couple["HATU / EDCI / DIPEA\nAmide Coupling Reaction"]
     B["4-(4-Fluorophenyl)-4-(1H-imidazo[4,5-b]pyridin-2-yl)piperidine\n(Intermediate 2)"] --> Couple
     
-    Couple --> C["Auraglutide (AURA-712) Free Base\nCrude API (>88% Yield)"]
+    Couple --> C["Auraglipron (AURA-712) Free Base\nCrude API (>88% Yield)"]
     C --> D["Salt Crystallization\n(Maleate / Mesylate Salt)"]
     D --> E["Crystalline Drug Substance\n(>99.2% HPLC Purity)"]
 
@@ -250,7 +250,7 @@ flowchart LR
 To contrast the lifestyle burden of weekly self-injections against oral solid-dose pharmacotherapy, the clinical user experience is illustrated below:
 
 <div align="center">
-  <img src="auraglutide_godtier_lifestyle.jpg" width="92%" alt="Auraglutide Morning Oral Routine (God-Tier Luxury Editorial)" />
+  <img src="Auraglipron_godtier_lifestyle.jpg" width="92%" alt="Auraglipron Morning Oral Routine (God-Tier Luxury Editorial)" />
 </div>
 
 * **Patient-Reported Preference**: Over $80\%$ of patients in metabolic disease registries favor a morning oral tablet over subcutaneous injections.
@@ -268,8 +268,8 @@ auranucleix/
 ├── candidate_profile.json              # Machine-readable properties, QED, SA_Score & schema
 ├── AURA-712_3D.sdf                     # Energy-minimized 3D atomic coordinates (UFF)
 ├── AURA-712_2D.png                     # 2D publication structure depiction
-├── auraglutide_godtier_packshot.jpg    # 10/10 Award-winning clinical industrial design packshot
-├── auraglutide_godtier_lifestyle.jpg   # 10/10 Leica/Summilux luxury lifestyle concept
+├── Auraglipron_godtier_packshot.jpg    # 10/10 Award-winning clinical industrial design packshot
+├── Auraglipron_godtier_lifestyle.jpg   # 10/10 Leica/Summilux luxury lifestyle concept
 ├── glp1r_3d_structure_render.png       # AlphaFold/Mol* 3D molecular structure render
 ├── docking_energy_breakdown.png        # Active-state 6XOX docking energy breakdown
 ├── cmc_synthesis_reaction.png          # RDKit simulated chemical synthesis reaction
