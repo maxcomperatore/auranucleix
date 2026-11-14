@@ -57,13 +57,27 @@ While first-generation peptide therapies (Semaglutide/Wegovy, Tirzepatide/Zepbou
 
 ## The Clinical Problem: Tolerability & Dropout Rates
 
-Real-world registry data and pivotal Phase 3 trials (STEP, SURMOUNT) reveal that **over 50% of patients discontinue peptide GLP-1 agonists within 12 months**:
+Real-world registry data and pivotal Phase 3 trials (STEP, SURMOUNT) reveal that **over 50% of patients discontinue peptide GLP-1 agonists within 12 months**.
 
-```
-[ Current Peptide Agonist ] ---> Full GLP-1R Activation 
-                                   ├── G_alpha_s Pathway =====> Weight Loss & Glycemic Control (DESIRED)
-                                   └── beta-Arrestin2 Pathway ===> Rapid Receptor Internalization + 
-                                                                  Hypothalamic/Area Postrema Nausea (LIMITING)
+```mermaid
+flowchart TD
+    subgraph Traditional_Peptide_Agonist["Unbiased Peptide Incretin (Semaglutide / Tirzepatide)"]
+        Agonist["GLP-1R Full Activation"]
+    end
+
+    Agonist -->|Signal 1| Gs["G_alpha_s Pathway"]
+    Agonist -->|Signal 2| Arr["beta-Arrestin2 Recruitment"]
+
+    Gs --> Camp["Intracellular cAMP Elevation"]
+    Camp --> Efficacy["Desired Clinical Efficacy: Satiety & Insulin Secretion"]
+
+    Arr --> Clathrin["Receptor Desensitization & Clathrin Internalization"]
+    Arr --> Vagal["Hypothalamic & Area Postrema Overactivation"]
+    Vagal --> Dropouts["Clinical Discontinuation: Nausea, Vomiting & Gastroparesis (15-30%)"]
+
+    style Traditional_Peptide_Agonist fill:#1e293b,stroke:#64748b,stroke-width:2px,color:#fff
+    style Efficacy fill:#065f46,stroke:#10b981,color:#fff
+    style Dropouts fill:#7f1d1d,stroke:#ef4444,color:#fff
 ```
 
 1. **Nausea & Vomiting**: Uncontrolled, rapid $\beta$-arrestin recruitment triggers forceful vagal and area-postrema emetic reflex centers.
@@ -74,12 +88,23 @@ Real-world registry data and pivotal Phase 3 trials (STEP, SURMOUNT) reveal that
 
 ## Functional Signaling Bias & Tolerability Rationale
 
-AURA-712 is purposely engineered as a **$G_s$-Biased Agonist**:
+AURA-712 is engineered as a **$G_{\alpha s}$-Biased Allosteric Agonist**:
 
-```
-[ Auraglutide (AURA-712) ] ---> Selective Transmembrane Conformation 
-                                   ├── G_alpha_s Pathway (100% Efficacy) ==> Full Glucose-Dependent Insulin & Satiety
-                                   └── beta-Arrestin2 Pathway (<15% Efficacy) => Minimal Nausea & No Tachyphylaxis
+```mermaid
+flowchart LR
+    Aura["Auraglutide (AURA-712)"] -->|Transmembrane Allosteric Shift| Rec["GLP-1R Biased Conformation"]
+    
+    Rec -->|"100% Efficacy (Primary)"| GsPath["G_alpha_s Pathway"]
+    Rec -.->|"<15% Efficacy (Suppressed)"| ArrPath["beta-Arrestin2 Pathway"]
+
+    GsPath --> Satiety["Steady Satiety & Glucose Homeostasis"]
+    ArrPath --> LowNausea["Minimal GI Nausea (<8% vs 40% Peptide)"]
+
+    style Rec fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#fff
+    style GsPath fill:#065f46,stroke:#10b981,color:#fff
+    style ArrPath fill:#334155,stroke:#94a3b8,stroke-dasharray: 5 5,color:#fff
+    style Satiety fill:#0284c7,stroke:#38bdf8,color:#fff
+    style LowNausea fill:#047857,stroke:#34d399,color:#fff
 ```
 
 * **Biased Efficacy Ratio ($\Delta\Delta \log(\tau/K_A) > 1.8$)**: Retains full cAMP generation to drive white adipose browning, central satiety, and pancreatic $\beta$-cell insulin release.
@@ -117,7 +142,7 @@ AURA-712 is purposely engineered as a **$G_s$-Biased Agonist**:
 
 The molecular target is the human **GLP-1R** (UniProt: `P43220`, PDB: [6XOX](https://www.rcsb.org/structure/6XOX)). 
 
-To assess receptor plasticity and conformational rigidity across the transmembrane binding cleft, the complete AlphaFold deep-learning structural dataset was queried and evaluated:
+To assess receptor plasticity and conformational rigidity across the transmembrane binding cleft, the complete AlphaFold deep-learning structural dataset was evaluated:
 
 <div align="center">
   <img src="alphafold_plddt_confidence.png" width="85%" alt="AlphaFold pLDDT Score" />
@@ -127,22 +152,29 @@ To assess receptor plasticity and conformational rigidity across the transmembra
 * **Per-Residue Confidence (pLDDT)**: The entire 7-transmembrane helical bundle (Residues 135–410) registers very high structural confidence ($pLDDT > 90$), confirming that the binding cleft where AURA-712 anchors does not suffer from conformational disorder.
 * **Predicted Aligned Error (PAE)**: The rigid inter-domain alignment between TM1, TM2, TM3, and TM7 exhibits an expected position error $< 3\text{ Å}$, validating that ligand-receptor contacts computed in this domain have high spatial fidelity.
 
-```
-                                  [ Extracellular Space ]
-                                             |
-            +--------------------------------+--------------------------------+
-            |                     GLP-1R Transmembrane Core                   |
-            |                                                                 |
-            |    [Trp33 / TM1] <--- π-π Stacking ---> [Fluorinated Ring]      |
-            |                                                 |               |
-            |    [Lys197] <--- Polar Directional Anchor ---> [Amide Core]     |
-            |                                                 |               |
-            |    [Arg380 / TM7] <--- H-Bond ---> [Azaindole Bicyclic Head]    |
-            |                                                 |               |
-            |    [TM5/TM6 Cleft] <--- Hydrophobic Clamp ---> [4-F Phenyl]     |
-            +--------------------------------+--------------------------------+
-                                             |
-                                   [ Intracellular Gs ]
+```mermaid
+graph TD
+    subgraph Binding_Pocket["GLP-1R Transmembrane Core (6XOX)"]
+        Trp["Trp33 / TM1 Anchor"]
+        Lys["Lys197 Directional Anchor"]
+        Arg["Arg380 / TM7 Helix"]
+        Cleft["TM5 / TM6 Inter-Helical Cleft"]
+    end
+
+    subgraph Ligand_Functional_Blocks["Auraglutide (AURA-712)"]
+        F_Ring["Fluorinated Dimethoxy Tail"]
+        Core["Piperidine-Amide Core"]
+        Aza["Azaindole Bicyclic Head"]
+        Phenyl["4-Fluorophenyl S-Block"]
+    end
+
+    F_Ring <-->|pi-pi Stacking| Trp
+    Core <-->|Salt Bridge Orientation| Lys
+    Aza <-->|Coplanar Hydrogen Bond| Arg
+    Phenyl <-->|Hydrophobic Clamp| Cleft
+
+    style Binding_Pocket fill:#0f172a,stroke:#38bdf8,color:#fff
+    style Ligand_Functional_Blocks fill:#1e293b,stroke:#10b981,color:#fff
 ```
 
 ---
@@ -170,21 +202,23 @@ Formula: C26H24F2N4O3 | Exact Mass: 478.18 | Monoisotopic: 478.18
 
 The synthetic pathway utilizes standard, robust, highly convergent organic transformations:
 
-```
-[ 4-(4-Fluorophenyl)piperidine ] + [ 1H-Pyrrolo[2,3-b]pyridine-2-carboxylic acid ]
-                                    │
-                                    ├── (1) Amide Coupling (EDCI / HOBt)
-                                    └── (2) Nucleophilic Aromatic Substitution / Fluoro-methoxy benzoyl coupling
-                                    │
-                         [ AURA-712 Crude Free Base ]
-                                    │
-                         [ Salt Screening: Maleate / HCl Form ]
-                                    ▼
-                [ >99.2% HPLC Purity Crystalline API ]
-```
+```mermaid
+flowchart TD
+    Pre1["4-(4-Fluorophenyl)piperidine"] --> Couple["Amide Coupling (EDCI / HOBt)"]
+    Pre2["1H-Pyrrolo[2,3-b]pyridine-2-carboxylic acid"] --> Couple
+    
+    Couple --> Inter["Bi-Aryl Core Intermediate"]
+    Inter --> Sub["Nucleophilic Substitution / Fluoro-methoxy benzoyl chloride"]
+    
+    Sub --> Crude["AURA-712 Crude Free Base"]
+    Crude --> Salt["Salt Formulation (Maleate / Mesylate Salt)"]
+    Salt --> Final["Crystalline API (>99.2% HPLC Purity)"]
 
-* **Scalability**: No chiral chromatography columns or protecting-group intensive peptide synthesis stages required.
-* **Solid-State Formulation**: Readily crystallizes into non-hygroscopic polymorph forms suitable for standard dry-granulation tablet compression.
+    style Pre1 fill:#1e293b,stroke:#64748b,color:#fff
+    style Pre2 fill:#1e293b,stroke:#64748b,color:#fff
+    style Couple fill:#0369a1,stroke:#38bdf8,color:#fff
+    style Final fill:#065f46,stroke:#10b981,stroke-width:2px,color:#fff
+```
 
 ---
 
