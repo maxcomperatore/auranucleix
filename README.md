@@ -11,6 +11,12 @@
 [![Toxicity Alerts](https://img.shields.io/badge/PAINS%2FBrenk%20Alerts-0%20(Clean)-brightgreen.svg)](#medicinal-chemistry-triage--structural-alerts)
 [![OpenTargets Validated](https://img.shields.io/badge/OpenTargets-ENSG00000112164-blueviolet.svg)](#target-validation--disease-associations-opentargets)
 
+<br/>
+
+<img src="auraglutide_product_lifestyle.jpg" width="92%" alt="Auraglutide Oral Tablet Product & Patient Concept" />
+
+*Concept Product Profile: True once-daily solid oral tablet eliminating weekly subcutaneous injections and cold-chain storage.*
+
 </div>
 
 ---
@@ -247,6 +253,7 @@ auranucleix/
 ├── candidate_profile.json              # Machine-readable properties, QED, SA_Score & schema
 ├── AURA-712_3D.sdf                     # Energy-minimized 3D atomic coordinates (UFF)
 ├── AURA-712_2D.png                     # 2D publication structure depiction
+├── auraglutide_product_lifestyle.jpg   # High-resolution product & lifestyle concept render
 ├── glp1r_3d_structure_render.png       # AlphaFold/Mol* 3D molecular structure render
 ├── docking_energy_breakdown.png        # Active-state 6XOX docking energy breakdown
 ├── cmc_synthesis_reaction.png          # RDKit simulated chemical synthesis reaction
